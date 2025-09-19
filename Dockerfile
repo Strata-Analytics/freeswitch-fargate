@@ -10,6 +10,11 @@ RUN useradd -r -s /usr/sbin/nologin freeswitch || true
 RUN mkdir -p /usr/local/freeswitch && chown -R freeswitch:freeswitch /usr/local/freeswitch
 
 COPY build/freeswitch/ /usr/local/freeswitch/
+RUN chown -R freeswitch:freeswitch /usr/local/freeswitch \
+ && find /usr/local/freeswitch -type d -exec chmod 755 {} \; \
+ && chmod 755 /usr/local/freeswitch/bin/freeswitch \
+ && chmod 755 /usr/local/freeswitch/bin/fs_cli
+
 
 COPY docker/entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh && chown -R freeswitch:freeswitch /usr/local/freeswitch
