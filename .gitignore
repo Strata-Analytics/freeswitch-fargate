@@ -1,0 +1,8 @@
+# cosas que no aportan y solo inflan el repo
+build/freeswitch/log/
+build/freeswitch/recordings/
+build/freeswitch/storage/
+# si no necesitás prompts/sounds, podés excluirlos también:
+# build/freeswitch/sounds/
+*.tgz
+*.tar.gz

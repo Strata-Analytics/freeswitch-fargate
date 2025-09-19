@@ -1,0 +1,10 @@
+<extension name="public_did_aws">
+  <condition field="destination_number" expression="^\+18638421345$">
+    <action application="set" data="absolute_codec_string=PCMU"/>
+    <action application="answer"/>
+    <action application="log" data="INFO UUID=${uuid} DID=${destination_number}"/>
+    <action application="sleep" data="300"/>
+    <action application="sched_hangup" data="+180 NORMAL_CLEARING"/>
+    <action application="echo"/>
+  </condition>
+</extension>

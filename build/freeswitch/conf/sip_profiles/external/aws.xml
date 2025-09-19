@@ -1,0 +1,15 @@
+<include>
+  <gateway name="awsvc">
+    <param name="proxy" value="blyukzdexxihkdrja618ir.voiceconnector.chime.aws"/>
+    <param name="register-transport" value="udp"/>
+    <param name="register" value="false"/>
+    <param name="from-domain" value="blyukzdexxihkdrja618ir.voiceconnector.chime.aws"/>
+    <param name="caller-id-in-from" value="true"/>
+    <param name="enable-timer" value="true"/>
+    <param name="session-timeout" value="900"/>
+    <param name="minimum-session-expires" value="120"/>
+    <param name="ping" value="60"/>
+    <param name="ping-max" value="10"/>
+    <param name="ping-min" value="1"/>
+  </gateway>
+</include>

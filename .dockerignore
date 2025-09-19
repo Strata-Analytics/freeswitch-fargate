@@ -1,0 +1,4 @@
+.git
+build/freeswitch/log/*
+build/freeswitch/recordings/*
+build/freeswitch/storage/*

@@ -1,0 +1,21 @@
+<extension name="local - awsvc">
+  <condition field="${toll_allow}" expression="local"/>
+  <condition field="destination_number" expression="^9(\d{10})$">
+    <action application="export" data="sip_cid_type=none"/>
+    <action application="set"    data="sip_cid_type=pid"/>
+    <action application="export" data="dtmf_type=rfc2833"/>
+    <action application="export" data="nolocal:absolute_codec_string=PCMU"/>
+    <action application="bridge" data="sofia/gateway/awsvc/+1$1"/>
+  </condition>
+</extension>
+
+<extension name="international - awsvc">
+  <condition field="${toll_allow}" expression="international"/>
+  <condition field="destination_number" expression="^9(\d+)$">
+    <action application="export" data="sip_cid_type=none"/>
+    <action application="set"    data="sip_cid_type=pid"/>
+    <action application="export" data="dtmf_type=rfc2833"/>
+    <action application="export" data="nolocal:absolute_codec_string=PCMU"/>
+    <action application="bridge" data="sofia/gateway/awsvc/$1"/>
+  </condition>
+</extension>
