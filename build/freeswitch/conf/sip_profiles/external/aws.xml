@@ -1,9 +1,9 @@
 <include>
   <gateway name="awsvc">
-    <param name="proxy" value="blyukzdexxihkdrja618ir.voiceconnector.chime.aws"/>
+    <param name="proxy" value="ecmhsaw0okgizuvxbcmhec.voiceconnector.chime.aws"/>
     <param name="register-transport" value="udp"/>
     <param name="register" value="false"/>
-    <param name="from-domain" value="blyukzdexxihkdrja618ir.voiceconnector.chime.aws"/>
+    <param name="from-domain" value="ecmhsaw0okgizuvxbcmhec.voiceconnector.chime.aws"/>
     <param name="caller-id-in-from" value="true"/>
     <param name="enable-timer" value="true"/>
     <param name="session-timeout" value="900"/>

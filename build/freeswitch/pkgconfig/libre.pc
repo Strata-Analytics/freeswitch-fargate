@@ -1,0 +1,13 @@
+prefix="/usr/local"
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include/re
+
+Name: libre
+Description: Generic library for real-time communications
+Version: 3.24.0
+URL: https://github.com/baresip/re
+Libs: -L${libdir} -lre
+Libs.private: -lresolv -lm -ldl
+Requires.private: zlib libssl libcrypto
+Cflags: -I${includedir}
